@@ -1,4 +1,4 @@
-Este projeto é uma aplicação web de detalhes de viagem feito no evento NLW da ROCKETSEAT, onde os usuários podem gerenciar links importantes relacionados a uma viagem específica. O objetivo é proporcionar uma maneira fácil e organizada de armazenar e acessar links relevantes durante o planejamento e execução de viagens.<br>
+Este projeto é uma aplicação web de detalhes de viagem feito no evento NLW da ROCKETSEAT onde implementei algumas  funções na  tripDetails e responsividade, onde os usuários podem gerenciar links importantes relacionados a uma viagem específica. O objetivo é proporcionar uma maneira fácil e organizada de armazenar e acessar links relevantes durante o planejamento e execução de viagens.<br>
 
 <br>Funcionalidades
 Adicionar Links Importantes: Permite aos usuários adicionar novos links com título e URL para uma viagem específica.
