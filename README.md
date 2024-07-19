@@ -17,9 +17,9 @@ Vite: Ferramenta de build para desenvolvimento front-end.
 SQLite: Banco de dados utilizado no backend.
 Prisma: ORM utilizado para interagir com o banco de dados SQLite.<br>
 <br>Para rodar:<br>
-Baixe as pastas do projeto e da  api-viagens
-Instale as Dependências com npm install e
-Inicie a Aplicação e api com npm run dev
+Baixe as pastas do projeto e da  api-viagens<br>
+Instale as Dependências com npm install e<br>
+Inicie a Aplicação e api com npm run dev<br>
 
 ![Captura de tela 2024-07-19 200236](https://github.com/user-attachments/assets/4ef66440-d176-4a7d-9dab-6586a0f15551)
 ![Captura de tela 2024-07-19 200941](https://github.com/user-attachments/assets/0e15504b-6f1b-4b57-86d3-746d2fa22d76)
