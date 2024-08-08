@@ -3,6 +3,7 @@ import { Button } from "../../components/button";
 import { FormEvent } from "react";
 import { api } from "../../lib/axios";
 import { useParams } from "react-router-dom";
+import React from "react";
 
 interface CreateActivityModalProps {
   closeCreateActivityModal: () => void
