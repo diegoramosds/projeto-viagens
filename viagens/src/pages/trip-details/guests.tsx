@@ -1,4 +1,4 @@
-import { AtSign, CheckCircle2, CircleDashed, Plus, UserCog, X } from "lucide-react";
+import { AtSign, CheckCircle2, CircleDashed, UserCog, X } from "lucide-react";
 import { Button } from "../../components/button";
 import { useState, useEffect, FormEvent, Dispatch, SetStateAction, useRef } from "react";
 import { useParams } from "react-router-dom";
@@ -43,34 +43,41 @@ export function Guests({
 
   const handleAddEmail = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setLoadind(true)
+    setLoadind(true);
     const data = new FormData(event.currentTarget);
     const email = data.get('email')?.toString();
 
     if (!email || participants.some(p => p.email === email)) {
+      setLoadind(false); // Adicione isso para garantir que o loading seja desativado em caso de erro
       return;
     }
 
     try {
-      await api.post(`/trips/${tripId}/invites`, { email });
-      setParticipants([...participants, { id: String(new Date().getTime()), name: `Convidado ${participants.length}`, email, is_confirmed: false }]);
+      const response = await api.post(`/trips/${tripId}/invites`, { email });
+      console.log('Resposta da API:', response.data); // Log da resposta
+
+      setLoadind(true);
+
+      // Atualize o estado de participantes de forma funcional
+      setParticipants(prevParticipants => [
+        ...prevParticipants,
+        { id: String(new Date().getTime()), name: `Convidado ${prevParticipants.length + 1}`, email, is_confirmed: false }
+      ]);
       formRef.current?.reset();
-      setLoadind(false)
+
     } catch (error) {
       console.error('Erro ao adicionar email:', error);
-      setLoadind(false)
+      setLoadind(false);
+    } finally {
+      setLoadind(false); // Use finally para garantir que o loading seja desativado
     }
-  };
-
-  // const handleRemove = (emailToRemove : string) => {
-  // const updatedParticipants  = participants.filter(participant => participant.email !== emailToRemove);
-    
-  // setParticipants(updatedParticipants);
+};
 
 
-  // //delete
-  
-  // } 
+  // const handleRemove = (emailToRemove: string) => {
+  //   const updatedParticipants = participants.filter(participant => participant.email !== emailToRemove);
+  //   setParticipants(updatedParticipants); // Atualizando o estado corretamente
+  // };
 
 
   return (
@@ -141,9 +148,8 @@ export function Guests({
                 />
               </div>
 
-              <Button disabled={loading} type="submit">
-              {loading ? <ClipLoader className="text-zinc-400 size-4" /> : <>Convidar <Plus className="size-5" /></>}
-                
+              <Button  type="submit">
+              {loading ? <ClipLoader className="text-zinc-400 size-4" /> : <>Convidar </>}
               </Button>
             </form>
           </div>
