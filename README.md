@@ -1,4 +1,8 @@
-# 🌍 Projeto: Detalhes de Viagem - NLW Rocketseat
+# 🌍 Plann.er
+
+
+ ## 📽️ Demonstração 
+![reactviagens](https://github.com/user-attachments/assets/5f4c6701-67b7-4337-be43-c9f02669d8f0)
 
 ## 🧭 Sobre o Projeto
 
@@ -42,12 +46,52 @@ Uso da biblioteca **Lucide React** para incorporar ícones modernos e acessívei
 - ✔️ **Prisma** – ORM moderno para manipulação do banco de dados
 
 ---
+## ▶️ Passo a Passo  
 
+### 🛠 **Executando a API**  
 
+1️⃣ **Clone o repositório**:  
+```bash
+git clone https://github.com/diegoramosds/projeto-viagens.git
 
+```
 
+2️⃣ **Acesse o diretório da API** no terminal.
+```bash
+cd api-viagens
+cd api
+```
 
+3️⃣ Execute para instalar as dependências do projeto.
+```bash
+npm install
+```
 
+4️⃣ Execute para iniciar o servidor da API.
+```bash
+npm run dev
+```
 
-![Captura de tela 2024-07-19 200236](https://github.com/user-attachments/assets/4ef66440-d176-4a7d-9dab-6586a0f15551)
-![Captura de tela 2024-07-19 200941](https://github.com/user-attachments/assets/0e15504b-6f1b-4b57-86d3-746d2fa22d76)
+5️⃣ Aguarde até que a API esteja rodando e ouvindo requisições na porta especificada.
+
+<br>
+
+### 💻 **Executando a Aplicação React** 
+
+1️⃣ Acesse o diretório da aplicação React no terminal.
+```bash
+cd viagens
+```
+
+2️⃣ Execute  para instalar as dependências do projeto.
+```bash
+npm install
+```
+
+3️⃣ Execute  para iniciar o servidor de desenvolvimento:
+```bash
+npm run dev
+```
+4️⃣ Aguarde até que a aplicação seja compilada e inicie no navegador.
+
+5️⃣ Acesse a aplicação pelo navegador no endereço fornecido pelo terminal.
